@@ -1,4 +1,7 @@
 from pyPS4Controller.controller import Controller
+from car import Car
+
+myCar = Car()
 
 
 class MyController(Controller):
@@ -11,6 +14,34 @@ class MyController(Controller):
 
   def on_x_release(self):
     print("Goodbye world")
+
+  def on_R3_up(self, value):
+    myCar.stop()
+    print("car stop")
+
+  def on_R3_down(self, value):
+    myCar.forward(value)
+    print('car go forward')
+
+  def on_R3_right(self, value):
+    myCar.backward(value)
+    print('car go back')
+
+  def on_R3_left(self, value):
+    myCar.stop()
+    print('car stop')
+
+  def on_L3_x_at_rest(self):
+    myCar.turn_center()
+    print('car return center')
+
+  def on_L3_left(self, value):
+    myCar.turn_left(1)
+    print('car turn left')
+
+  def on_L3_right(self, value):
+    myCar.turn_right(1)
+    print('car turn right')
 
 
 controller = MyController(interface="/dev/input/js0", connecting_using_ds4drv=False)
