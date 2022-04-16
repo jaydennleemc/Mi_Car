@@ -7,7 +7,7 @@ const App = () => (
   <Router>
     <Stack key="root" hideNavBar>
       <Scene key="splash" component={SplashView} initial />
-      <Scene key='control' component={ControlView} />
+      <Scene key='control' component={ControlView} initial />
     </Stack>
   </Router>
 )
