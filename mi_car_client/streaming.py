@@ -67,7 +67,7 @@ class StreamingHandler(server.BaseHTTPRequestHandler):
                     self.wfile.write(b'\r\n')
             except Exception as e:
                 logging.warning(
-                    'Removed streaming client %s: %s',
+                    'Removed streaming mi_car_client %s: %s',
                     self.client_address, str(e))
         else:
             self.send_error(404)
