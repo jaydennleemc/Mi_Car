@@ -1,1 +1,3 @@
 mi_car_server/node_modules/
+mi_car_client/venv/
+mi_car_client/__pycache__/car.cpython-39.pyc

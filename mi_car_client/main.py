@@ -1,6 +1,6 @@
 # Import the required modules
 from IPython.display import clear_output
-import socket
+import socket_car
 import sys
 import cv2
 import matplotlib.pyplot as plt
